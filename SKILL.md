@@ -45,9 +45,51 @@
 | 相对路径 | ❌ 不支持 | `./img.jpg` |
 
 ### 2. 推荐存储位置
+- **✅ 工作区图片**：`~/.openclaw/workspace/`（**推荐**，OpenClaw 信任目录）
 - **接收的图片**：`~/.openclaw/media/inbound/`
-- **工作区图片**：`~/.openclaw/workspace/`
-- **临时图片**：`/tmp/`（需先复制）
+- **临时图片**：`/tmp/`（⚠️ **不能直接发送**，需先复制）
+
+### 3. 完整流程示例
+```bash
+# Step 1: 截图
+screencapture -x /tmp/desktop.png
+
+# Step 2: 复制到工作区（可选，但推荐）
+cp /tmp/desktop.png ~/.openclaw/workspace/desktop.png
+
+# Step 3: 使用 media: 协议发送
+# 在 message 工具中：
+{
+  "action": "send",
+  "channel": "feishu",
+  "media": "media:/Users/jo/.openclaw/workspace/desktop.png",
+  "caption": "桌面截图"
+}
+```
+
+---
+
+## ⚠️ 关键注意事项（2026-03-09 更新）
+
+### ❌ 常见错误：从临时目录发送
+```json
+{
+  "media": "media:/tmp/screenshot.png"  // ❌ 失败：/tmp/ 目录权限不足
+}
+```
+
+### ✅ 正确做法：先复制到工作区
+```bash
+# 1. 复制到工作区
+cp /tmp/screenshot.png ~/.openclaw/workspace/
+
+# 2. 从工作区发送
+{
+  "media": "media:/Users/jo/.openclaw/workspace/screenshot.png"  // ✅ 成功
+}
+```
+
+**原因**：飞书插件只能访问 OpenClaw 信任的目录（如 `~/.openclaw/workspace/`），临时目录（`/tmp/`）可能因权限问题导致发送失败。
 
 ### 3. 完整流程示例
 
@@ -119,5 +161,5 @@ cp /tmp/desktop.png ~/.openclaw/workspace/desktop.png
 
 ---
 
-*最后更新：2026-03-09*
+*最后更新：2026-03-09（添加目录权限说明）*
 *适用版本：OpenClaw 2026.3.1+*
