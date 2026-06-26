@@ -55,7 +55,7 @@
 
 ```bash
 cd ~/.openclaw/workspace/skills/
-git clone https://github.com/YOUR_USERNAME/feishu-image-skill.git
+git clone https://github.com/watsonagenda/feishu-image-skill.git
 ```
 
 ### 方法 2：直接使用协议

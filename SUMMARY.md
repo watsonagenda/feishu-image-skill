@@ -47,13 +47,13 @@
 1. **上传到 GitHub**：
    ```bash
    cd ~/Desktop/feishu-image-skill
-   git remote add origin https://github.com/YOUR_USERNAME/feishu-image-skill.git
+   git remote add origin https://github.com/watsonagenda/feishu-image-skill.git
    git branch -M main
    git push -u origin main
    ```
 
 2. **创建 GitHub Release**：
-   - 访问 https://github.com/YOUR_USERNAME/feishu-image-skill/releases
+   - 访问 https://github.com/watsonagenda/feishu-image-skill/releases
    - 创建 v1.0.0 版本
 
 ### 后续可选

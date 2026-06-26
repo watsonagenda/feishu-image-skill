@@ -39,7 +39,7 @@
 ```bash
 # 1. 克隆此仓库到 OpenClaw skills 目录
 cd ~/.openclaw/workspace/skills/
-git clone https://github.com/YOUR_USERNAME/feishu-image-skill.git
+git clone https://github.com/watsonagenda/feishu-image-skill.git
 
 # 2. 在对话中使用
 # 现在你的 Agent 已经知道如何正确发送图片了！

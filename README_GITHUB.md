@@ -10,12 +10,12 @@
 
 # 2. 推送代码
 cd ~/Desktop/feishu-image-skill
-git remote add origin https://github.com/YOUR_USERNAME/feishu-image-skill.git
+git remote add origin https://github.com/watsonagenda/feishu-image-skill.git
 git branch -M main
 git push -u origin main
 
 # 3. 完成！
-# 访问 https://github.com/YOUR_USERNAME/feishu-image-skill
+# 访问 https://github.com/watsonagenda/feishu-image-skill
 ```
 
 ## 方法 2：使用 Git 命令
@@ -27,7 +27,7 @@ git push -u origin main
 
 # 2. 推送代码
 cd ~/Desktop/feishu-image-skill
-git remote add origin https://github.com/YOUR_USERNAME/feishu-image-skill.git
+git remote add origin https://github.com/watsonagenda/feishu-image-skill.git
 git branch -M main
 git push -u origin main
 ```
@@ -53,7 +53,7 @@ git push -u origin main
 - `plugin`
 
 ### 3. 创建 GitHub Release
-1. 访问 https://github.com/YOUR_USERNAME/feishu-image-skill/releases
+1. 访问 https://github.com/watsonagenda/feishu-image-skill/releases
 2. 点击 "Create a new release"
 3. Tag version: `v1.0.0`
 4. Release title: `v1.0.0 - Initial Release`
@@ -82,7 +82,7 @@ git push -u origin main
 
 📦 安装：
 cd ~/.openclaw/workspace/skills/
-git clone https://github.com/YOUR_USERNAME/feishu-image-skill.git
+git clone https://github.com/watsonagenda/feishu-image-skill.git
 
 🔗 相关：
 - OpenClaw: https://github.com/openclaw/openclaw
